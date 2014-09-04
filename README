@@ -1,0 +1,8 @@
+
+駅名について, 
+http://www.navitime.co.jp/transfer/searchlist?orvStationName=本郷三丁目&dnvStationName=渋谷&sort=1&from=view.transfer.searchlist.tab.fare
+を参考にURLを生成して, 
+
+grep "summary_fare_ic" | head -n 1 | sed -e 's/.*\([0-9]\{3,4\}円\).*/\1/'
+
+すれば最安の移動費用が分かるはず 
